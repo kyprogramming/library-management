@@ -1,0 +1,33 @@
+<form method="post" action="signin" class="needs-validation" novalidate>
+  <div>
+    <div>
+      <h2>Sign In</h2>
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" name="email" id="email" required placeholder="name@example.com" autocomplete="off">
+      <div class="invalid-feedback">
+        Please enter a valid email.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="pwd" class="form-label">Password</label>
+      <input type="password" class="form-control" name="pwd" id="pwd" required placeholder="Enter password" autocomplete="off">
+      <div class="invalid-feedback">
+        Please enter password.
+      </div>
+    </div>
+
+    <div class="text-end">
+      <button type="submit" class="btn btn-primary">Sign In</button>
+    </div>
+
+  </div>
+
+  <div>
+     <p> Not register yet  <a href="/user/register">Register</a>  here.</p>
+  </div>
+
+</form>

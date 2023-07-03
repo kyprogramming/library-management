@@ -4,6 +4,7 @@ import {config} from './config/config';
 import indexRouter from './routes/indexRoute'
 import authorRouter from './routes/authorRoute'
 import bookRouter from './routes/bookRoute'
+import userRouter from './routes/userRoute'
 import expressEjsLayouts from 'express-ejs-layouts';
  
 const app:Express   = express();
@@ -27,6 +28,7 @@ app.use(express.json());
 app.use('/', indexRouter);
 app.use('/author', authorRouter);
 app.use('/book', bookRouter);
+app.use('/user', userRouter);
 
 const startServer = ():void=>{
     app.listen(config.server.port, ():void=>{

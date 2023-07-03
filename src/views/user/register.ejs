@@ -1,0 +1,89 @@
+<form method="post" action="register" class="needs-validation" novalidate>
+  <div>
+    <div>
+      <h2>Register</h2>
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" class="form-control" name="email" id="email" required placeholder="name@example.com" autocomplete="off">
+      <div class="invalid-feedback">
+        Please enter a valid email.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="pwd" class="form-label">Password</label>
+      <input type="password" class="form-control" name="pwd" id="pwd" required placeholder="Enter password" autocomplete="off">
+      <div class="invalid-feedback">
+        Please enter password.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="confirm_password" class="form-label">Confirm Password</label>
+      <input type="password" class="form-control" name="confirm_password" id="confirm_password" required placeholder="Confirm  password" autocomplete="off">
+      <div class="invalid-feedback">
+        Password didn't match.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="phone" class="form-label">Phone</label>
+      <input type="tel" class="form-control" name="phone" id="phone" placeholder="Enter phone no in the format +XX XXXXXXXXXX" autocomplete="off" pattern="^(\+|00)[1-9][0-9 \-\(\)\.]{7,32}$">
+      <div class="invalid-feedback">
+        Phone no is not valid.
+      </div>
+    </div>
+
+    <div class="text-end">
+      <button type="submit" class="btn btn-primary">Register</button>
+    </div>
+
+  </div>
+
+  <div>
+     <p> If already registered, please <a href="/user/signin">Sign In</a> </p>
+  </div>
+
+</form>
+
+
+
+<script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (function () {
+    'use strict'
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+
+          form.classList.add('was-validated')
+        }, false)
+      })
+  })()
+
+  var password = document.getElementById("pwd")
+    , confirm_password = document.getElementById("confirm_password");
+
+  function validatePassword() {
+    if (password.value != confirm_password.value) {
+      confirm_password.setCustomValidity("Passwords Don't Match");
+    } else {
+      confirm_password.setCustomValidity('');
+    }
+  }
+
+  password.onchange = validatePassword;
+  confirm_password.onkeyup = validatePassword;
+
+</script>

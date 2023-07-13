@@ -2,13 +2,21 @@
     <input type="checkbox" id="nav-toggle">
     <div class="logo"><strong>Library Management </strong></div>
 
+
     <ul class="links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/authors">Authors</a></li>
-        <li><a href="/books">Books</a></li>
-        <li><a href="/contat">Contact</a></li>
-        <li><a href="/user/register">Register</a></li>
-        <li><a href="/user/signin">Sign In</a></li>
+        <% if(!locals.user) { %>
+            <li><a href="/user/register">Register</a></li>
+            <li><a href="/user/signin">Sign In</a></li>
+        <% } else { %>
+            <li><a href="/">Home</a></li>
+            <li><a href="/authors">Authors</a></li>
+            <li><a href="/books">Books</a></li>
+            <li><a href="/contat">Contact</a></li>
+            <!-- <li></li> -->
+            <form method="post" action="/user/signout">
+                <a href="javascript:$('form').submit();">SignOut</a>
+            </form>
+        <% } %>
     </ul>
     <label for="nav-toggle" class="icon-burger">
         <div class="line"></div>

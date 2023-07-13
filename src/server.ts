@@ -6,6 +6,8 @@ import authorRouter from './routes/authorRoute'
 import bookRouter from './routes/bookRoute'
 import userRouter from './routes/userRoute'
 import expressEjsLayouts from 'express-ejs-layouts';
+import bodyParser from 'body-parser';
+import cookieParser from 'cookie-parser';
  
 const app:Express   = express();
 
@@ -22,8 +24,10 @@ app.set('views', __dirname+ '/views');
 app.set('layout' , 'layouts/layout');
 
 app.use(express.static('src/public'));
+app.use(bodyParser.urlencoded({limit:'10mb' , extended:true}));
 app.use(expressEjsLayouts);
 app.use(express.json());
+app.use(cookieParser());
 
 app.use('/', indexRouter);
 app.use('/author', authorRouter);

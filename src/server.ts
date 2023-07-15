@@ -8,6 +8,8 @@ import userRouter from './routes/userRoute'
 import expressEjsLayouts from 'express-ejs-layouts';
 import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
+import verifyToken from './middleware/verifyToken';
+import methodOverride from 'method-override';
  
 const app:Express   = express();
 
@@ -26,13 +28,14 @@ app.set('layout' , 'layouts/layout');
 app.use(express.static('src/public'));
 app.use(bodyParser.urlencoded({limit:'10mb' , extended:true}));
 app.use(expressEjsLayouts);
+app.use(methodOverride('_method'))
 app.use(express.json());
 app.use(cookieParser());
 
-app.use('/', indexRouter);
-app.use('/author', authorRouter);
-app.use('/book', bookRouter);
 app.use('/user', userRouter);
+app.use('/', verifyToken , indexRouter);
+app.use('/author', verifyToken, authorRouter);
+app.use('/book', verifyToken, bookRouter);
 
 const startServer = ():void=>{
     app.listen(config.server.port, ():void=>{

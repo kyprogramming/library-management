@@ -99,7 +99,7 @@ class UserController {
       const key  = process.env.secret_key || '';
       const {_id , email , role} = _user;
       const user:any  = {_id, email, role};
-      return jwt.sign({user}, key , {expiresIn:'30s'});
+      return jwt.sign({user}, key , {expiresIn:'900s'});
     }
    
 }

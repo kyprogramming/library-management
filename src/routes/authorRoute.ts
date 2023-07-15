@@ -3,12 +3,12 @@ import AuthorController from '../controllers/authorController';
 
 const router:Router  = express.Router()
 
-router.get('/', AuthorController.getAuthor)
+router.get('/new', AuthorController.newAuthor);
+router.get('/', AuthorController.viewAuthors)
+router.get('/:id/edit', AuthorController.editAuthor);
 
 router.post('/', AuthorController.saveAuthor)
-
-router.put('/:id', AuthorController.updateAuthor)
-
+router.post('/:id', AuthorController.updateAuthor)
 router.delete('/:id', AuthorController.deleteAuthor)
 
 export default router;

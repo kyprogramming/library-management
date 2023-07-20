@@ -1,0 +1,26 @@
+<form action="book" method="get">
+    <div class="search-header text-center">
+      <h2 class="text-center">Search Book</h2>
+    </div>
+    <div class="form-row">
+      <div class="col-12 mb-3">
+        <label for="name">Book Title</label>
+        <input type="text" class="form-control" name="title" id="title" value="<%= searchOption.title%>">
+      </div>
+    </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary">
+        <i class="bi bi-search" style="color: white;"></i>
+        Search
+      </button>
+      <a href="/book/new"> <button type="button" class="btn btn-success">
+          <i class="bi bi-plus" style="color: white;"></i>
+          Add Book
+        </button></a>
+    </div>
+  </form>
+
+  <br>
+<div>
+  <%- include('../partials/bookGrid.ejs')%>
+</div>

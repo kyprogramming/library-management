@@ -1,0 +1,38 @@
+<% if(books.length> 0) { %>
+<div class="book-content">
+  <% books.forEach(book=> { %>
+  <div class="card title-box" style="width: 430px;">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <a href="/books/<%= book.id%>">
+          <img class="book-cover" src="<%= book.coverImagePath %>">
+        </a>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body" style="position: absolute; top:2px; left:200px">
+          <h5 class="card-title">
+            <%= book.title %>
+          </h5>
+          <p class="card-text">
+            <%= book.description %>
+          </p>
+          <p class="card-text"><small class="text-muted">Author: <%= book.author.name %></small></p>
+          <p class="card-text"><small class="text-muted">Publish Date: <%= book.publishDate.toDateString() %></small></p>
+          <p class="card-text"><small class="text-muted">Page Count: <%= book.pageCount %></small></p>
+        </div>
+
+        <div style="position: absolute; bottom: 10px; right: 20px;">
+          <form id="frmAction<%= book.id %>" action="/book/<%= book.id%>?_method=DELETE" method="post">
+            <a class="btn btn-primary" href="/book/<%= book.id%>"><i class="bi bi-eye" style="color: white;"></i></a>
+            <a class="btn btn-success" href="/book/<%= book.id%>/edit"><i class="bi bi-pencil" style="color: white;"></i></a>
+            <a class="btn btn-danger" href="javascript:$('#frmAction<%= book.id %>').submit();"><i class="bi bi-trash" style="color: white;"></i></a>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <% })%>
+</div>
+<% } %>

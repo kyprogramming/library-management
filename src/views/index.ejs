@@ -1,1 +1,7 @@
-Body from index.ejs file
+<div class="search-header text-center">
+  <h2 class="text-center">Recently Added</h2>
+</div>
+<br>
+<div>
+  <%- include('partials/bookGrid.ejs', {books:books})%>
+</div>

@@ -9,10 +9,7 @@ router.get('/:id', BookController.viewBook)
 router.get('/:id/edit', BookController.editBook)
 
 router.post('/', BookController.saveBook)
-
 router.post('/:id', BookController.updateBook)
-
 router.delete('/:id', BookController.deleteBook)
-
 
 export default router;

@@ -1,0 +1,26 @@
+<div class="modal-content" style="width:500px;">
+  <div class="search-header text-center">
+    <h2 class="text-center"> There is some problem!</h2>
+  </div>
+  <% if(code == 500) { %>
+  <div class="modal-footer" style="text-align: center;">
+    <div class="col-12">
+      Internal Server Error!
+    </div>
+  </div>
+  <% } %>
+  <% if(code == 403) { %>
+  <div class="modal-footer" style="text-align: center;">
+    <div class="col-12">
+      Session Expired! Please <a href="/user/signin">SignIn</a>.
+    </div>
+  </div>
+  <% } %>
+  <% if(code != 403) { %>
+  <div class="modal-footer m-8" style="text-align: center;">
+    <div class="col-12">
+      Please go back to <a href="/">Home</a>.
+    </div>
+  </div>
+  <% } %>
+</div>

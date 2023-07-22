@@ -1,0 +1,52 @@
+<form class="row  needs-validation" action="/contact" method="post" novalidate>
+    <div class="modal-content">
+      <div class="search-header text-center">
+        <h2 class="text-center">Contact us</h2>
+        <div>
+          <p>kkyprogramming@gmail.com</p>
+          <p>+ 44 7442555583</p>
+          <p>London, UK</p>
+        </div> 
+      </div>
+      <div class="modal-body">
+        <div class="col-12">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control input-lg" id="name" name="name" required>
+          <div class="invalid-feedback">
+            Please provide your name.
+          </div>
+        </div>
+  
+        <div class="col-12">
+          <label for="email" class="form-label">Email</label>
+          <input type="text" class="form-control input-lg" id="email" name="email" required>
+          <div class="invalid-feedback">
+            Please provide your email.
+          </div>
+        </div>
+  
+  
+        <div class="col-12">
+          <label for="subject" class="form-label">Subject</label>
+          <input type="text" class="form-control input-lg" id="subject" name="subject" required>
+          <div class="invalid-feedback">
+            Please provide subject.
+          </div>
+        </div>
+  
+        <div class="col-12">
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" class="form-control input-lg" name="message" rows="4" cols="50" required></textarea>
+          <div class="invalid-feedback">
+            Please provide your message.
+          </div>
+        </div>
+  
+      </div>
+  
+      <div class="modal-footer">
+        <a href="/"><button type="button" class="btn btn-secondary m-3" data-dismiss="modal"><i class="bi bi-x-circle"></i> Close</button></a>
+        <button type="submit" class="btn btn-primary"><i class="bi bi-save2"></i> Save</button>
+      </div>
+    </div>
+  </form>

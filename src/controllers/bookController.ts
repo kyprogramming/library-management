@@ -1,7 +1,6 @@
 import express, { Router, Request, Response } from 'express'
 import Book from '../models/book';
 import Author from '../models/author';
-import AuthorController from './authorController';
 
 class BookController {
 
@@ -22,8 +21,6 @@ class BookController {
     public static getBook = (req: Request, res: Response) => {
         res.send("this is book get response");
     }
-
-
 
     public static saveBook = async (req: any, res: Response) => {
         console.log(req.body);
@@ -54,7 +51,7 @@ class BookController {
     }
 
     public static updateBook = async (req: any, res: Response) => {
-       
+
         const book: any = await Book.findById(req.params.id);
         if (req.body) {
             book.title = req.body.title;
@@ -72,9 +69,9 @@ class BookController {
     }
     public static deleteBook = async (req: Request, res: Response) => {
         const id = req.params.id;
-        console.log("delete req.body",req.body);
-        const book = await Book.findOneAndDelete({_id:id});
-        this.renderBook(req,res);
+        console.log("delete req.body", req.body);
+        const book = await Book.findOneAndDelete({ _id: id });
+        this.renderBook(req, res);
     }
 
     private static async renderBook(req: any, res: any) {

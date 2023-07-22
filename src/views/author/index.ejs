@@ -1,26 +1,26 @@
 <form action="author" method="get">
-    <div class="search-header text-center">
-      <h2 class="text-center">Search Author</h2>
+  <div class="search-header text-center">
+    <h2 class="text-center">Search Author</h2>
+  </div>
+  <div class="form-row">
+    <div class="col-12 mb-3">
+      <label for="name">Author Name</label>
+      <input type="text" class="form-control" name="name" id="name" value="<%= searchOption.name%>">
     </div>
-    <div class="form-row">
-      <div class="col-12 mb-3">
-        <label for="name">Author Name</label>
-        <input type="text" class="form-control" name="name" id="name" value="<%= searchOption.name%>">
-      </div>
-    </div>
-    <div class="text-center">
-      <button type="submit" class="btn btn-primary">
-        <i class="bi bi-search" style="color: white;"></i>
-        Search
-      </button>
-      <a href="/author/new"> <button type="button" class="btn btn-success">
-          <i class="bi bi-plus" style="color: white;"></i>
-          Add Author
-        </button></a>
-    </div>
-  </form>
+  </div>
+  <div class="text-center">
+    <button type="submit" class="btn btn-primary">
+      <i class="bi bi-search" style="color: white;"></i>
+      Search
+    </button>
+    <a href="/author/new"> <button type="button" class="btn btn-success">
+        <i class="bi bi-plus" style="color: white;"></i>
+        Add Author
+      </button></a>
+  </div>
+</form>
 
-  <br>
+<br>
 <div class="container" style="width: 2000px;">
   <div class="row">
     <div class="col-12" class="table-responsive">
@@ -43,10 +43,10 @@
             </td>
             <td style="width: 25%; align-items: center; text-align: center;">
               <form id="frmAction<%= author.id %>" action="/author/<%= author.id%>?_method=DELETE" method="post">
-              <a class="btn btn-primary" href="/author/<%= author.id%>"><i class="bi bi-eye" style="color: white;"></i></a>
-              <a class="btn btn-success" href="/author/<%= author.id%>/edit" ><i class="bi bi-pencil" style="color: white;"></i></a>
-              <a class="btn btn-danger" href="javascript:$('#frmAction<%= author.id %>').submit();"><i class="bi bi-trash" style="color: white;"></i></a>
-            </form>
+                <a class="btn btn-primary" href="/author/<%= author.id%>"><i class="bi bi-eye" style="color: white;"></i></a>
+                <a class="btn btn-success" href="/author/<%= author.id%>/edit"><i class="bi bi-pencil" style="color: white;"></i></a>
+                <a class="btn btn-danger" href="javascript:$('#frmAction<%= author.id %>').submit();"><i class="bi bi-trash" style="color: white;"></i></a>
+              </form>
             </td>
           </tr>
           <% }); %>

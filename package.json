@@ -6,8 +6,9 @@
     "clean": "rm -rf ./build/",
     "tsc": "tsc",
     "start": "node build/server.js",
+    "copy-assets": "ts-node tools/copyAssets.ts",
     "dev": "nodemon src/server.ts",
-    "build:all": "npm-run-all clean tsc start",
+    "build:all": "npm-run-all clean tsc copy-assets start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -27,6 +28,7 @@
     "@types/express-fileupload": "^1.4.1",
     "@types/jsonwebtoken": "^9.0.2",
     "@types/method-override": "^0.0.32",
+    "@types/shelljs": "^0.8.12",
     "body-parser": "^1.20.2",
     "cookie-parser": "^1.4.6",
     "crypto": "^1.0.1",
@@ -36,6 +38,7 @@
     "express-fileupload": "^1.4.0",
     "jsonwebtoken": "^9.0.1",
     "method-override": "^3.0.0",
-    "mongoose": "^7.3.4"
+    "mongoose": "^7.3.4",
+    "shelljs": "^0.8.5"
   }
 }

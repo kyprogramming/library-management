@@ -19,12 +19,12 @@ class AuthorController {
     }
 
     public static saveAuthor = async (req: Request, res: Response) => {
-        console.log(req.body);
+        // console.log(req.body);
         const { name, email } = req.body;
         const author = new Author({ name, email });
         const newAuthor = await author.save();
         this.renderAuthor(req, res);
-        console.log(newAuthor);
+        // console.log(newAuthor);
     }
 
     public static editAuthor = async (req: any, res: Response) => {
@@ -45,7 +45,7 @@ class AuthorController {
 
     public static deleteAuthor = async (req: Request, res: Response) => {
         const id = req.params.id;
-        console.log("delete req.body", req.body);
+        // console.log("delete req.body", req.body);
         const author = await Author.findOneAndDelete({ _id: id });
         this.renderAuthor(req, res);
     }
@@ -57,9 +57,9 @@ class AuthorController {
         if (pattern) {
             searchOption.name = new RegExp(pattern, 'i');
         }
-        console.log(searchOption);
+        // console.log(searchOption);
         const authors: any = await Author.find(searchOption);
-        console.log(authors);
+        // console.log(authors);
         res.render('author/index', { authors: authors, searchOption: req.query, user: user });
     }
 

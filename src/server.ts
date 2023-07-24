@@ -13,15 +13,22 @@ import verifyToken from './middleware/verifyToken';
 import methodOverride from 'method-override';
 import fileupload from 'express-fileupload';
 import ErrorHandler from './middleware/errorHandler';
+import log4js from './middleware/logger';
 
 const app: Express = express();
 
+const logger = log4js.getLogger('file');
+
 mongoose.connect(config.mongo.url);
 const db: Connection = mongoose.connection;
-db.on('error', (err: string) => console.log(err));
+db.on('error', (err: string) => logger.error(err));
 db.once('open', (): void => {
-    console.log('database connected successfully.')
+    logger.info('database connected successfully.')
     startServer();
+});
+
+process.on('uncaughtException', function (err) {
+    logger.info(`uncaughtException: ${err}`);
 })
 
 app.set('view engine', 'ejs');
@@ -46,6 +53,6 @@ app.use(ErrorHandler.handleError);
 
 const startServer = (): void => {
     app.listen(config.server.port, (): void => {
-        console.log(`server is running on port : ${process.env.server_port}`);
+        logger.info(`server is running on port : ${process.env.server_port}`);
     })
 }

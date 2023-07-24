@@ -25,10 +25,10 @@ class UserController {
       password,
       phone
     })
-    console.log(user);
+    // console.log(user);
 
     const newUser = await user.save();
-    console.log(`user added successfully ${newUser}`);
+    // console.log(`user added successfully ${newUser}`);
     res.render('user/signin');
   }
 
@@ -36,7 +36,7 @@ class UserController {
   public static signInUser = async (req: Request, res: Response) => {
     const body = req.body;
     const { email, pwd } = req.body;
-    console.log(req.body);
+    // console.log(req.body);
     // const password = this.decryptData(pwd);
 
 
@@ -45,19 +45,19 @@ class UserController {
     if (user) {
       const decPassword = this.decryptData(user.password);
       if (pwd === decPassword) {
-        console.log('Valid User');
+        // console.log('Valid User');
         const accessToken = this.generateAccessToken(user);
-        console.log(accessToken);
+        // console.log(accessToken);
         res.cookie('accessToken', accessToken, { maxAge: 900000, httpOnly: true });
         res.redirect('/');
       }
       else {
-        console.log('Invalid User');
+        // console.log('Invalid User');
         res.render('user/signin');
       }
 
     }
-    console.log(`registered User ${user}`);
+    // console.log(`registered User ${user}`);
   }
 
 

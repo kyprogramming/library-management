@@ -1,7 +1,7 @@
 import dotenv from 'dotenv';
 dotenv.config()
 
-const SERVER_PORT = 4001;
+const SERVER_PORT = process.env.SERVER_PORT;
 
 const MONGO_USERNAME = process.env.MONGO_USERNAME;
 const MONGO_PASSWORD = process.env.MONGO_PASSWORD;

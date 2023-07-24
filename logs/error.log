@@ -1,0 +1,113 @@
+[2023-07-24T19:21:10.308] [INFO] file - database connected successfully.
+[2023-07-24T19:21:10.320] [INFO] file - server is running on port : 4001
+[2023-07-24T19:22:49.883] [ERROR] file - MongoServerError: bad auth : authentication failed
+    at Connection.onMessage (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\mongodb\src\cmap\connection.ts:413:18)
+    at MessageStream.<anonymous> (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\mongodb\src\cmap\connection.ts:243:56)
+    at MessageStream.emit (node:events:513:28)
+    at MessageStream.emit (node:domain:489:12)
+    at processIncomingData (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\mongodb\src\cmap\message_stream.ts:187:12)
+    at MessageStream._write (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\mongodb\src\cmap\message_stream.ts:68:5)
+    at writeOrBuffer (node:internal/streams/writable:392:12)
+    at _write (node:internal/streams/writable:333:10)
+    at MessageStream.Writable.write (node:internal/streams/writable:337:10)
+    at TLSSocket.ondata (node:internal/streams/readable:766:22) {
+  ok: 0,
+  code: 8000,
+  codeName: 'AtlasError',
+  connectionGeneration: 0,
+  [Symbol(errorLabels)]: Set(2) { 'HandshakeError', 'ResetPool' }
+}
+[2023-07-24T19:24:01.652] [INFO] file - database connected successfully.
+[2023-07-24T19:24:01.679] [INFO] file - server is running on port : 4001
+[2023-07-24T19:28:15.367] [INFO] file - database connected successfully.
+[2023-07-24T19:28:15.387] [INFO] file - server is running on port : 4001
+[2023-07-24T19:28:57.739] [ERROR] file - JsonWebTokenError: jwt must be provided
+    at Object.module.exports [as verify] (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\jsonwebtoken\verify.js:60:17)
+    at verifyToken (C:\Users\kkyad\MyFiles\Projects\library-management\src\middleware\verifyToken.ts:6:9)
+    at Layer.handle [as handle_request] (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\index.js:280:10)
+    at cookieParser (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handle [as handle_request] (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\index.js:328:13) {
+  statusCode: 403
+}
+[2023-07-24T19:32:52.716] [INFO] file - database connected successfully.
+[2023-07-24T19:32:52.731] [INFO] file - server is running on port : 4001
+[2023-07-24T19:39:14.322] [INFO] file - database connected successfully.
+[2023-07-24T19:39:14.346] [INFO] file - server is running on port : 4001
+[2023-07-24T19:40:37.492] [INFO] file - database connected successfully.
+[2023-07-24T19:40:37.523] [INFO] file - server is running on port : 4001
+[2023-07-24T19:40:40.167] [ERROR] file - JsonWebTokenError: jwt must be provided
+    at Object.module.exports [as verify] (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\jsonwebtoken\verify.js:60:17)
+    at verifyToken (C:\Users\kkyad\MyFiles\Projects\library-management\src\middleware\verifyToken.ts:6:9)
+    at Layer.handle [as handle_request] (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\index.js:280:10)
+    at cookieParser (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handle [as handle_request] (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\index.js:328:13) {
+  statusCode: 403
+}
+[2023-07-24T19:42:18.829] [ERROR] file - JsonWebTokenError: jwt must be provided
+    at Object.module.exports [as verify] (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\jsonwebtoken\verify.js:60:17)
+    at verifyToken (C:\Users\kkyad\MyFiles\Projects\library-management\src\middleware\verifyToken.ts:6:9)
+    at Layer.handle [as handle_request] (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\index.js:280:10)
+    at cookieParser (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handle [as handle_request] (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\index.js:328:13) {
+  statusCode: 403
+}
+[2023-07-24T19:42:49.438] [ERROR] file - JsonWebTokenError: jwt must be provided
+    at Object.module.exports [as verify] (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\jsonwebtoken\verify.js:60:17)
+    at verifyToken (C:\Users\kkyad\MyFiles\Projects\library-management\src\middleware\verifyToken.ts:6:9)
+    at Layer.handle [as handle_request] (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\index.js:280:10)
+    at cookieParser (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handle [as handle_request] (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\index.js:328:13) {
+  statusCode: 403
+}
+[2023-07-24T19:46:45.040] [INFO] file - database connected successfully.
+[2023-07-24T19:46:45.058] [INFO] file - server is running on port : 4001
+[2023-07-24T19:47:08.474] [ERROR] file - JsonWebTokenError: jwt must be provided
+    at Object.module.exports [as verify] (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\jsonwebtoken\verify.js:60:17)
+    at verifyToken (C:\Users\kkyad\MyFiles\Projects\library-management\src\middleware\verifyToken.ts:6:9)
+    at Layer.handle [as handle_request] (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\index.js:280:10)
+    at cookieParser (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handle [as handle_request] (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\index.js:328:13) {
+  statusCode: 403
+}
+[2023-07-24T21:45:49.069] [ERROR] file - JsonWebTokenError: jwt must be provided
+    at Object.module.exports [as verify] (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\jsonwebtoken\verify.js:60:17)
+    at verifyToken (C:\Users\kkyad\MyFiles\Projects\library-management\src\middleware\verifyToken.ts:6:9)
+    at Layer.handle [as handle_request] (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\index.js:328:13)
+    at C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\index.js:280:10)
+    at cookieParser (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\cookie-parser\index.js:57:14)
+    at Layer.handle [as handle_request] (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\Users\kkyad\MyFiles\Projects\library-management\node_modules\express\lib\router\index.js:328:13) {
+  statusCode: 403
+}
+[2023-07-24T23:16:35.641] [INFO] file - database connected successfully.
+[2023-07-24T23:16:35.651] [INFO] file - server is running on port : 4001
+[2023-07-24T23:19:45.340] [INFO] file - database connected successfully.
+[2023-07-24T23:19:45.352] [INFO] file - server is running on port : 4001

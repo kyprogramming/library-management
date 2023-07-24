@@ -23,8 +23,8 @@ class BookController {
     }
 
     public static saveBook = async (req: any, res: Response) => {
-        console.log(req.body);
-        console.log(req.files);
+        // console.log(req.body);
+        // console.log(req.files);
 
         const book = new Book({
             title: req.body.title,
@@ -40,7 +40,7 @@ class BookController {
         const newBook = await book.save();
         res.redirect(`book`);
         // this.renderAuthor(req,res);
-        console.log(newBook);
+        // console.log(newBook);
     }
 
     public static editBook = async (req: any, res: Response) => {
@@ -69,7 +69,7 @@ class BookController {
     }
     public static deleteBook = async (req: Request, res: Response) => {
         const id = req.params.id;
-        console.log("delete req.body", req.body);
+        // console.log("delete req.body", req.body);
         const book = await Book.findOneAndDelete({ _id: id });
         this.renderBook(req, res);
     }
@@ -81,9 +81,9 @@ class BookController {
         if (pattern) {
             searchOption.title = new RegExp(pattern, 'i');
         }
-        console.log(searchOption);
+        // console.log(searchOption);
         const books: any = await Book.find(searchOption).populate('author').exec();
-        console.log(books);
+        // console.log(books);
         res.render('book/index', { books: books, searchOption: req.query, user: user });
     }
 }
